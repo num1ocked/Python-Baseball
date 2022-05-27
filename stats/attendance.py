@@ -7,3 +7,5 @@ attendance = games.loc[(games['type'] == 'info') & (games['multi2'] == 'attendan
 attendance.columns = ['year', 'attendance']
 
 attendance.loc[:, 'attendance'] = pd.to_numeric(attendance.loc[:, 'attendance'])
+
+attendance.plot(x='year', y='attendance', figsize=(15, 7), kind='bar')
